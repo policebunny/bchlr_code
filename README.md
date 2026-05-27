@@ -35,6 +35,7 @@ Dabei muss das Projekt einmal mit "dotnet build" gebuildet und dann mit "dotnet 
             // for(int i = 0; i <= howMany; i++) { runGrids(logging, i); }
 ```
 Auskommentieren um die Algorithmen innerhalb der Grid mit dem manuellen Logging durchzuführen.
+Dabei muss der [bool logging] Wert auf [true] gesetzt werden.
 Hierbei werden die Werte "Checked Nodes" und "Path Length" gemessen und automatisch geloggt.
 Die Ergebnisse werden in "loggedInfo.json" unter "Logging" gespeichert, wobei ein erneuter Logvorgang an die Datei angehangen wird.
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>impl_search.SortBenchmark-20260504-181317</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.8246/25H2/2025Update/HudsonValley2)
+12th Gen Intel Core i5-12450H 2.00GHz, 1 CPU, 12 logical and 8 physical cores
+.NET SDK 8.0.400
+  [Host]     : .NET 8.0.8 (8.0.8, 8.0.824.36612), X64 RyuJIT x86-64-v3
+  DefaultJob : .NET 8.0.8 (8.0.8, 8.0.824.36612), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method </th><th>whichGrid</th><th>Mean   </th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Running_Astar</td><td>0</td><td>18.852 &mu;s</td><td>0.0567 &mu;s</td><td>0.0443 &mu;s</td><td>9.0027</td><td>0.4272</td><td>-</td><td>55.27 KB</td>
+</tr><tr><td>Running_CnC</td><td>0</td><td>4.299 &mu;s</td><td>0.0122 &mu;s</td><td>0.0102 &mu;s</td><td>1.9073</td><td>0.0076</td><td>-</td><td>11.71 KB</td>
+</tr><tr><td>Running_JPS</td><td>0</td><td>16.216 &mu;s</td><td>0.1034 &mu;s</td><td>0.0864 &mu;s</td><td>5.7068</td><td>0.0610</td><td>-</td><td>35.07 KB</td>
+</tr><tr><td>Running_Astar</td><td>1</td><td>64.502 &mu;s</td><td>0.1908 &mu;s</td><td>0.1785 &mu;s</td><td>27.4658</td><td>2.6855</td><td>-</td><td>168.29 KB</td>
+</tr><tr><td>Running_CnC</td><td>1</td><td>3.035 &mu;s</td><td>0.0084 &mu;s</td><td>0.0074 &mu;s</td><td>1.4954</td><td>0.0305</td><td>-</td><td>9.16 KB</td>
+</tr><tr><td>Running_JPS</td><td>1</td><td>309.884 &mu;s</td><td>0.4307 &mu;s</td><td>0.3818 &mu;s</td><td>76.1719</td><td>-</td><td>-</td><td>468.96 KB</td>
+</tr><tr><td>Running_Astar</td><td>2</td><td>445.355 &mu;s</td><td>0.9663 &mu;s</td><td>0.8566 &mu;s</td><td>192.8711</td><td>63.9648</td><td>-</td><td>1184.12 KB</td>
+</tr><tr><td>Running_CnC</td><td>2</td><td>61.252 &mu;s</td><td>0.1619 &mu;s</td><td>0.1515 &mu;s</td><td>26.2451</td><td>1.3428</td><td>-</td><td>160.81 KB</td>
+</tr><tr><td>Running_JPS</td><td>2</td><td>761.891 &mu;s</td><td>1.8906 &mu;s</td><td>1.5788 &mu;s</td><td>263.6719</td><td>0.9766</td><td>-</td><td>1620.57 KB</td>
+</tr><tr><td>Running_Astar</td><td>3</td><td>1,590.032 &mu;s</td><td>4.3482 &mu;s</td><td>4.0673 &mu;s</td><td>740.2344</td><td>5.8594</td><td>-</td><td>4545.92 KB</td>
+</tr><tr><td>Running_CnC</td><td>3</td><td>123.064 &mu;s</td><td>0.2259 &mu;s</td><td>0.2113 &mu;s</td><td>56.1523</td><td>4.1504</td><td>-</td><td>344.68 KB</td>
+</tr><tr><td>Running_JPS</td><td>3</td><td>1,109.242 &mu;s</td><td>1.8489 &mu;s</td><td>1.5439 &mu;s</td><td>460.9375</td><td>9.7656</td><td>-</td><td>2832.15 KB</td>
+</tr><tr><td>Running_Astar</td><td>4</td><td>1,070.885 &mu;s</td><td>2.2024 &mu;s</td><td>2.0602 &mu;s</td><td>494.1406</td><td>164.0625</td><td>-</td><td>3033.32 KB</td>
+</tr><tr><td>Running_CnC</td><td>4</td><td>138.792 &mu;s</td><td>0.3084 &mu;s</td><td>0.2408 &mu;s</td><td>69.0918</td><td>6.8359</td><td>-</td><td>423.45 KB</td>
+</tr><tr><td>Running_JPS</td><td>4</td><td>1,026.365 &mu;s</td><td>3.4304 &mu;s</td><td>4.2128 &mu;s</td><td>539.0625</td><td>5.8594</td><td>-</td><td>3308.48 KB</td>
+</tr><tr><td>Running_Astar</td><td>5</td><td>12,737.731 &mu;s</td><td>47.2606 &mu;s</td><td>41.8953 &mu;s</td><td>7140.6250</td><td>93.7500</td><td>46.8750</td><td>43888.2 KB</td>
+</tr><tr><td>Running_CnC</td><td>5</td><td>1,850.691 &mu;s</td><td>9.6386 &mu;s</td><td>8.5444 &mu;s</td><td>1099.6094</td><td>76.1719</td><td>-</td><td>6738.78 KB</td>
+</tr><tr><td>Running_JPS</td><td>5</td><td>3,930.683 &mu;s</td><td>14.5553 &mu;s</td><td>12.1544 &mu;s</td><td>2687.5000</td><td>62.5000</td><td>-</td><td>16484.62 KB</td>
+</tr><tr><td>Running_Astar</td><td>6</td><td>402.252 &mu;s</td><td>1.8493 &mu;s</td><td>1.4438 &mu;s</td><td>225.5859</td><td>39.5508</td><td>-</td><td>1382.41 KB</td>
+</tr><tr><td>Running_CnC</td><td>6</td><td>1,635.355 &mu;s</td><td>3.3617 &mu;s</td><td>2.9801 &mu;s</td><td>1050.7813</td><td>56.6406</td><td>-</td><td>6445.03 KB</td>
+</tr><tr><td>Running_JPS</td><td>6</td><td>11,153.111 &mu;s</td><td>30.6638 &mu;s</td><td>25.6057 &mu;s</td><td>7265.6250</td><td>31.2500</td><td>-</td><td>44595.2 KB</td>
+</tr><tr><td>Running_Astar</td><td>7</td><td>1,319.501 &mu;s</td><td>3.9451 &mu;s</td><td>3.6902 &mu;s</td><td>669.9219</td><td>167.9688</td><td>-</td><td>4106.09 KB</td>
+</tr><tr><td>Running_CnC</td><td>7</td><td>138.814 &mu;s</td><td>0.6342 &mu;s</td><td>0.5622 &mu;s</td><td>71.7773</td><td>3.1738</td><td>-</td><td>440.03 KB</td>
+</tr><tr><td>Running_JPS</td><td>7</td><td>2,161.441 &mu;s</td><td>3.6490 &mu;s</td><td>3.2348 &mu;s</td><td>1320.3125</td><td>23.4375</td><td>-</td><td>8102.46 KB</td>
+</tr></tbody></table>
+</body>
+</html>
